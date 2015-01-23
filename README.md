@@ -1,0 +1,1 @@
+# cucumber-results-aggregator-plugin
