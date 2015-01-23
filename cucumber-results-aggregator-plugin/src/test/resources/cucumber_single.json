@@ -1,0 +1,1738 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 225671429,
+              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat myModule.ref.service.RefDataRestServiceStepDef.existing_sectors_are_as_follow(RefDataRestServiceStepDef.java:17)\r\n\tat ✽.Given existing sectors are as follow(features/referentialdata-ws-scenario.feature:6)\r\n",
+              "status": "pending"
+            },
+            "line": 6,
+            "name": "existing sectors are as follow",
+            "match": {
+              "location": "RefDataRestServiceStepDef.existing_sectors_are_as_follow(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "sectorId",
+                  "sectorLabel"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "1",
+                  "Retail"
+                ],
+                "line": 8
+              },
+              {
+                "cells": [
+                  "2",
+                  "Shipping"
+                ],
+                "line": 9
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "existing subSectors are as follow",
+            "match": {
+              "location": "RefDataRestServiceStepDef.existing_subSectors_are_as_follow(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "subSectorId",
+                  "subSectorLabel",
+                  "parentSectorLabel"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "1",
+                  "Retail - BL1",
+                  "Retail"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "2",
+                  "Retail - BL2",
+                  "Retail"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "3",
+                  "Shipping- BL2",
+                  "Shipping"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "4",
+                  "Shipping - BL2",
+                  "Shipping"
+                ],
+                "line": 15
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "these deals have already been assigned to a sector/subSector",
+            "match": {
+              "location": "RefDataRestServiceStepDef.these_deals_have_already_been_assigned_to_a_sector_subSector(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "dlCode",
+                  "dlSourceApplication",
+                  "sector",
+                  "subSector"
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "DL12345",
+                  "SRC",
+                  "Shipping",
+                  "Shipping - BL1"
+                ],
+                "line": 18
+              },
+              {
+                "cells": [
+                  "DL4567",
+                  "SRC",
+                  "Retail",
+                  "Retail- BL1"
+                ],
+                "line": 19
+              },
+              {
+                "cells": [
+                  "DL4567",
+                  "SSAC",
+                  "Retail",
+                  "Retail- BL1"
+                ],
+                "line": 20
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 22,
+        "name": "to perform sector/subsector assignation from my application (CPM or LSO for instance),",
+        "description": "I need to list the available sector/subsector labels and IDs to pick them and provide the correct values when performing actual assignation",
+        "id": "as-a-lso-front-office-user-or-a-cpm-back-office-user,-i-want-to-manage-a-deal-sector/subsector-from-anywhere;to-perform-sector/subsector-assignation-from-my-application-(cpm-or-lso-for-instance),",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "comments": [
+              {
+                "line": 25,
+                "value": "# We are assuming below that there\u0027s a single entry point to get both sector/subSector."
+              },
+              {
+                "line": 26,
+                "value": "# We don\u0027t have one entry point for sector, the other for subSector"
+              }
+            ],
+            "line": 27,
+            "name": "I request the list of existing sectors/subSectors",
+            "match": {
+              "location": "RefDataRestServiceStepDef.i_request_the_list_of_existing_sectors_subSectors()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "I receive the following Json message",
+            "match": {
+              "location": "RefDataRestServiceStepDef.i_receive_the_following_Json_message(String)"
+            },
+            "keyword": "Then ",
+            "doc_string": {
+              "content_type": "",
+              "line": 29,
+              "value": "# Need to decide together : what is the most appropriate format for Json response. According to Paul, 2nd solution is better.\r\n# - subSectors nested in parent sector\r\n# - 2 \"flat\" lists for sector and subSector, not nested, but subSectors have an attribute to link to parent sector.  "
+            }
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 320016,
+              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat myModule.ref.service.RefDataRestServiceStepDef.existing_sectors_are_as_follow(RefDataRestServiceStepDef.java:17)\r\n\tat ✽.Given existing sectors are as follow(features/referentialdata-ws-scenario.feature:6)\r\n",
+              "status": "pending"
+            },
+            "line": 6,
+            "name": "existing sectors are as follow",
+            "match": {
+              "location": "RefDataRestServiceStepDef.existing_sectors_are_as_follow(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "sectorId",
+                  "sectorLabel"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "1",
+                  "Retail"
+                ],
+                "line": 8
+              },
+              {
+                "cells": [
+                  "2",
+                  "Shipping"
+                ],
+                "line": 9
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "existing subSectors are as follow",
+            "match": {
+              "location": "RefDataRestServiceStepDef.existing_subSectors_are_as_follow(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "subSectorId",
+                  "subSectorLabel",
+                  "parentSectorLabel"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "1",
+                  "Retail - BL1",
+                  "Retail"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "2",
+                  "Retail - BL2",
+                  "Retail"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "3",
+                  "Shipping- BL2",
+                  "Shipping"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "4",
+                  "Shipping - BL2",
+                  "Shipping"
+                ],
+                "line": 15
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "these deals have already been assigned to a sector/subSector",
+            "match": {
+              "location": "RefDataRestServiceStepDef.these_deals_have_already_been_assigned_to_a_sector_subSector(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "dlCode",
+                  "dlSourceApplication",
+                  "sector",
+                  "subSector"
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "DL12345",
+                  "SRC",
+                  "Shipping",
+                  "Shipping - BL1"
+                ],
+                "line": 18
+              },
+              {
+                "cells": [
+                  "DL4567",
+                  "SRC",
+                  "Retail",
+                  "Retail- BL1"
+                ],
+                "line": 19
+              },
+              {
+                "cells": [
+                  "DL4567",
+                  "SSAC",
+                  "Retail",
+                  "Retail- BL1"
+                ],
+                "line": 20
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 35,
+        "name": "I can retrieve the sector/subSector infos from a given deal to display in my application.",
+        "description": "deal code is enough if it is unique.",
+        "id": "as-a-lso-front-office-user-or-a-cpm-back-office-user,-i-want-to-manage-a-deal-sector/subsector-from-anywhere;i-can-retrieve-the-sector/subsector-infos-from-a-given-deal-to-display-in-my-application.",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 38,
+            "name": "I request the sector/subSector for deal \"DL12345\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DL12345",
+                  "offset": 41
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_request_the_sector_subSector_for_deal(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 39,
+            "name": "I receive this Json message",
+            "match": {
+              "location": "RefDataRestServiceStepDef.i_receive_this_Json_message(String)"
+            },
+            "keyword": "Then ",
+            "doc_string": {
+              "content_type": "",
+              "line": 40,
+              "value": "# developer to make proposition here..."
+            }
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 43,
+            "name": "when I request the sector/subSector for deal \"DL78965\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DL78965",
+                  "offset": 46
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_request_the_sector_subSector_for_deal(String)"
+            },
+            "keyword": "But "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 44,
+            "name": "I get an error code saying request for given deal was invalid  # HTTP 404 code ?",
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 70
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_get_an_error_code_saying_request_for_given_deal_was_invalid_HTTP_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 45,
+            "name": "I get an error message saying \"deal has no known assigned sector/subSector\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "deal has no known assigned sector/subSector",
+                  "offset": 31
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_get_an_error_message_saying(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 387192,
+              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat myModule.ref.service.RefDataRestServiceStepDef.existing_sectors_are_as_follow(RefDataRestServiceStepDef.java:17)\r\n\tat ✽.Given existing sectors are as follow(features/referentialdata-ws-scenario.feature:6)\r\n",
+              "status": "pending"
+            },
+            "line": 6,
+            "name": "existing sectors are as follow",
+            "match": {
+              "location": "RefDataRestServiceStepDef.existing_sectors_are_as_follow(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "sectorId",
+                  "sectorLabel"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "1",
+                  "Retail"
+                ],
+                "line": 8
+              },
+              {
+                "cells": [
+                  "2",
+                  "Shipping"
+                ],
+                "line": 9
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "existing subSectors are as follow",
+            "match": {
+              "location": "RefDataRestServiceStepDef.existing_subSectors_are_as_follow(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "subSectorId",
+                  "subSectorLabel",
+                  "parentSectorLabel"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "1",
+                  "Retail - BL1",
+                  "Retail"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "2",
+                  "Retail - BL2",
+                  "Retail"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "3",
+                  "Shipping- BL2",
+                  "Shipping"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "4",
+                  "Shipping - BL2",
+                  "Shipping"
+                ],
+                "line": 15
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "these deals have already been assigned to a sector/subSector",
+            "match": {
+              "location": "RefDataRestServiceStepDef.these_deals_have_already_been_assigned_to_a_sector_subSector(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "dlCode",
+                  "dlSourceApplication",
+                  "sector",
+                  "subSector"
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "DL12345",
+                  "SRC",
+                  "Shipping",
+                  "Shipping - BL1"
+                ],
+                "line": 18
+              },
+              {
+                "cells": [
+                  "DL4567",
+                  "SRC",
+                  "Retail",
+                  "Retail- BL1"
+                ],
+                "line": 19
+              },
+              {
+                "cells": [
+                  "DL4567",
+                  "SSAC",
+                  "Retail",
+                  "Retail- BL1"
+                ],
+                "line": 20
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "comments": [
+          {
+            "line": 47,
+            "value": "# alternative to above Then : instead of returning an error, we return a valid message, but with empty sector/subSector attribute."
+          }
+        ],
+        "line": 48,
+        "name": "I can retrieve the sector/subSector infos from a given deal to display in my application.",
+        "description": "if deal code is not unique, then I must provide source application. If not provided, an error is returned.",
+        "id": "as-a-lso-front-office-user-or-a-cpm-back-office-user,-i-want-to-manage-a-deal-sector/subsector-from-anywhere;i-can-retrieve-the-sector/subsector-infos-from-a-given-deal-to-display-in-my-application.",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 51,
+            "name": "I request the sector/subSector for deal \"DL4567\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DL4567",
+                  "offset": 41
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_request_the_sector_subSector_for_deal(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 52,
+            "name": "I provide the source application as \"SRC\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "SRC",
+                  "offset": 37
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_provide_the_source_application_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 53,
+            "name": "I receive this Json message",
+            "match": {
+              "location": "RefDataRestServiceStepDef.i_receive_this_Json_message(String)"
+            },
+            "keyword": "Then ",
+            "doc_string": {
+              "content_type": "",
+              "line": 54,
+              "value": "# developer to make proposition here...  Should be same format as above scenario"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 57,
+            "name": "when I request the sector/subSector for deal \"DL4567\" only",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DL4567",
+                  "offset": 46
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_request_the_sector_subSector_for_deal(String)"
+            },
+            "keyword": "But "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 58,
+            "name": "I get an error code saying request for given deal was invalid/ambiguous # need to find appropriate HTTP error code",
+            "match": {
+              "location": "RefDataRestServiceStepDef.i_get_an_error_code_saying_request_for_given_deal_was_invalid_ambiguous_need_to_find_appropriate_HTTP_error_code()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 59,
+            "name": "I get an error message saying \"several records match the provided deal code DL4567 ; please provide source application to make request unambiguous\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "several records match the provided deal code DL4567 ; please provide source application to make request unambiguous",
+                  "offset": 31
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_get_an_error_message_saying(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 354848,
+              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat myModule.ref.service.RefDataRestServiceStepDef.existing_sectors_are_as_follow(RefDataRestServiceStepDef.java:17)\r\n\tat ✽.Given existing sectors are as follow(features/referentialdata-ws-scenario.feature:6)\r\n",
+              "status": "pending"
+            },
+            "line": 6,
+            "name": "existing sectors are as follow",
+            "match": {
+              "location": "RefDataRestServiceStepDef.existing_sectors_are_as_follow(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "sectorId",
+                  "sectorLabel"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "1",
+                  "Retail"
+                ],
+                "line": 8
+              },
+              {
+                "cells": [
+                  "2",
+                  "Shipping"
+                ],
+                "line": 9
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "existing subSectors are as follow",
+            "match": {
+              "location": "RefDataRestServiceStepDef.existing_subSectors_are_as_follow(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "subSectorId",
+                  "subSectorLabel",
+                  "parentSectorLabel"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "1",
+                  "Retail - BL1",
+                  "Retail"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "2",
+                  "Retail - BL2",
+                  "Retail"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "3",
+                  "Shipping- BL2",
+                  "Shipping"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "4",
+                  "Shipping - BL2",
+                  "Shipping"
+                ],
+                "line": 15
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "these deals have already been assigned to a sector/subSector",
+            "match": {
+              "location": "RefDataRestServiceStepDef.these_deals_have_already_been_assigned_to_a_sector_subSector(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "dlCode",
+                  "dlSourceApplication",
+                  "sector",
+                  "subSector"
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "DL12345",
+                  "SRC",
+                  "Shipping",
+                  "Shipping - BL1"
+                ],
+                "line": 18
+              },
+              {
+                "cells": [
+                  "DL4567",
+                  "SRC",
+                  "Retail",
+                  "Retail- BL1"
+                ],
+                "line": 19
+              },
+              {
+                "cells": [
+                  "DL4567",
+                  "SSAC",
+                  "Retail",
+                  "Retail- BL1"
+                ],
+                "line": 20
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 61,
+        "name": "when assigning sector/subSector, both deal code and source application are mandatory",
+        "description": "",
+        "id": "as-a-lso-front-office-user-or-a-cpm-back-office-user,-i-want-to-manage-a-deal-sector/subsector-from-anywhere;when-assigning-sector/subsector,-both-deal-code-and-source-application-are-mandatory",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 62,
+            "name": "I need to assign a sector/subSector to deal \"DL74185\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DL74185",
+                  "offset": 45
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_need_to_assign_a_sector_subSector_to_deal(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 63,
+            "name": "I provide the source application as \"SRC\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "SRC",
+                  "offset": 37
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_provide_the_source_application_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 64,
+            "name": "I assign it to sector \"Shipping\" and subSector \"Shipping - BL1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Shipping",
+                  "offset": 23
+                },
+                {
+                  "val": "Shipping - BL1",
+                  "offset": 48
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_assign_it_to_sector_and_subSector(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 65,
+            "name": "it gets recorded in referential repository",
+            "match": {
+              "location": "RefDataRestServiceStepDef.it_gets_recorded_in_referential_repository()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 66,
+            "name": "I get a status code saying everything went well # ie HTTP code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 63
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_get_a_status_code_saying_everything_went_well_ie_HTTP_code(int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 342719,
+              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat myModule.ref.service.RefDataRestServiceStepDef.existing_sectors_are_as_follow(RefDataRestServiceStepDef.java:17)\r\n\tat ✽.Given existing sectors are as follow(features/referentialdata-ws-scenario.feature:6)\r\n",
+              "status": "pending"
+            },
+            "line": 6,
+            "name": "existing sectors are as follow",
+            "match": {
+              "location": "RefDataRestServiceStepDef.existing_sectors_are_as_follow(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "sectorId",
+                  "sectorLabel"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "1",
+                  "Retail"
+                ],
+                "line": 8
+              },
+              {
+                "cells": [
+                  "2",
+                  "Shipping"
+                ],
+                "line": 9
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "existing subSectors are as follow",
+            "match": {
+              "location": "RefDataRestServiceStepDef.existing_subSectors_are_as_follow(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "subSectorId",
+                  "subSectorLabel",
+                  "parentSectorLabel"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "1",
+                  "Retail - BL1",
+                  "Retail"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "2",
+                  "Retail - BL2",
+                  "Retail"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "3",
+                  "Shipping- BL2",
+                  "Shipping"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "4",
+                  "Shipping - BL2",
+                  "Shipping"
+                ],
+                "line": 15
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "these deals have already been assigned to a sector/subSector",
+            "match": {
+              "location": "RefDataRestServiceStepDef.these_deals_have_already_been_assigned_to_a_sector_subSector(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "dlCode",
+                  "dlSourceApplication",
+                  "sector",
+                  "subSector"
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "DL12345",
+                  "SRC",
+                  "Shipping",
+                  "Shipping - BL1"
+                ],
+                "line": 18
+              },
+              {
+                "cells": [
+                  "DL4567",
+                  "SRC",
+                  "Retail",
+                  "Retail- BL1"
+                ],
+                "line": 19
+              },
+              {
+                "cells": [
+                  "DL4567",
+                  "SSAC",
+                  "Retail",
+                  "Retail- BL1"
+                ],
+                "line": 20
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 68,
+        "name": "when assigning sector/subSector, if source code is not provided, I get an error message",
+        "description": "",
+        "id": "as-a-lso-front-office-user-or-a-cpm-back-office-user,-i-want-to-manage-a-deal-sector/subsector-from-anywhere;when-assigning-sector/subsector,-if-source-code-is-not-provided,-i-get-an-error-message",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 69,
+            "name": "I need to assign a sector/subSector to deal \"DL74185\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DL74185",
+                  "offset": 45
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_need_to_assign_a_sector_subSector_to_deal(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 70,
+            "name": "I do not provide the source application",
+            "match": {
+              "location": "RefDataRestServiceStepDef.i_do_not_provide_the_source_application()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 71,
+            "name": "I assign it to sector \"Shipping\" and subSector \"Shipping - BL1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Shipping",
+                  "offset": 23
+                },
+                {
+                  "val": "Shipping - BL1",
+                  "offset": 48
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_assign_it_to_sector_and_subSector(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 72,
+            "name": "I get an error code saying request could not be processed  # need to find appropriate HTTP error code : 400?",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 104
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_get_an_error_code_saying_request_could_not_be_processed_need_to_find_appropriate_HTTP_error_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 73,
+            "name": "I get an error message saying \"when assigning a sector/subSector, source application is mandatory\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "when assigning a sector/subSector, source application is mandatory",
+                  "offset": 31
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_get_an_error_message_saying(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 509726,
+              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat myModule.ref.service.RefDataRestServiceStepDef.existing_sectors_are_as_follow(RefDataRestServiceStepDef.java:17)\r\n\tat ✽.Given existing sectors are as follow(features/referentialdata-ws-scenario.feature:6)\r\n",
+              "status": "pending"
+            },
+            "line": 6,
+            "name": "existing sectors are as follow",
+            "match": {
+              "location": "RefDataRestServiceStepDef.existing_sectors_are_as_follow(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "sectorId",
+                  "sectorLabel"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "1",
+                  "Retail"
+                ],
+                "line": 8
+              },
+              {
+                "cells": [
+                  "2",
+                  "Shipping"
+                ],
+                "line": 9
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "existing subSectors are as follow",
+            "match": {
+              "location": "RefDataRestServiceStepDef.existing_subSectors_are_as_follow(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "subSectorId",
+                  "subSectorLabel",
+                  "parentSectorLabel"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "1",
+                  "Retail - BL1",
+                  "Retail"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "2",
+                  "Retail - BL2",
+                  "Retail"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "3",
+                  "Shipping- BL2",
+                  "Shipping"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "4",
+                  "Shipping - BL2",
+                  "Shipping"
+                ],
+                "line": 15
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "these deals have already been assigned to a sector/subSector",
+            "match": {
+              "location": "RefDataRestServiceStepDef.these_deals_have_already_been_assigned_to_a_sector_subSector(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "dlCode",
+                  "dlSourceApplication",
+                  "sector",
+                  "subSector"
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "DL12345",
+                  "SRC",
+                  "Shipping",
+                  "Shipping - BL1"
+                ],
+                "line": 18
+              },
+              {
+                "cells": [
+                  "DL4567",
+                  "SRC",
+                  "Retail",
+                  "Retail- BL1"
+                ],
+                "line": 19
+              },
+              {
+                "cells": [
+                  "DL4567",
+                  "SSAC",
+                  "Retail",
+                  "Retail- BL1"
+                ],
+                "line": 20
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 75,
+        "name": "when assigning sector/subSector to a deal, subSector is mandatory. If it is missing, I get error message",
+        "description": "",
+        "id": "as-a-lso-front-office-user-or-a-cpm-back-office-user,-i-want-to-manage-a-deal-sector/subsector-from-anywhere;when-assigning-sector/subsector-to-a-deal,-subsector-is-mandatory.-if-it-is-missing,-i-get-error-message",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 76,
+            "name": "I need to assign a sector/subSector to deal \"DL74185\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DL74185",
+                  "offset": 45
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_need_to_assign_a_sector_subSector_to_deal(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 77,
+            "name": "I provide the source application as \"SRC\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "SRC",
+                  "offset": 37
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_provide_the_source_application_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 78,
+            "name": "I assign it to sector \"Shipping\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Shipping",
+                  "offset": 23
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_assign_it_to_sector(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 79,
+            "name": "I get an error code saying request could not be processed  # need to find appropriate HTTP error code : 400?",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 104
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_get_an_error_code_saying_request_could_not_be_processed_need_to_find_appropriate_HTTP_error_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 80,
+            "name": "I get an error message saying \"when assigning a sector/subSector to a deal, both sector and subSector are mandatory\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "when assigning a sector/subSector to a deal, both sector and subSector are mandatory",
+                  "offset": 31
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_get_an_error_message_saying(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 389058,
+              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat myModule.ref.service.RefDataRestServiceStepDef.existing_sectors_are_as_follow(RefDataRestServiceStepDef.java:17)\r\n\tat ✽.Given existing sectors are as follow(features/referentialdata-ws-scenario.feature:6)\r\n",
+              "status": "pending"
+            },
+            "line": 6,
+            "name": "existing sectors are as follow",
+            "match": {
+              "location": "RefDataRestServiceStepDef.existing_sectors_are_as_follow(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "sectorId",
+                  "sectorLabel"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "1",
+                  "Retail"
+                ],
+                "line": 8
+              },
+              {
+                "cells": [
+                  "2",
+                  "Shipping"
+                ],
+                "line": 9
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "existing subSectors are as follow",
+            "match": {
+              "location": "RefDataRestServiceStepDef.existing_subSectors_are_as_follow(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "subSectorId",
+                  "subSectorLabel",
+                  "parentSectorLabel"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "1",
+                  "Retail - BL1",
+                  "Retail"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "2",
+                  "Retail - BL2",
+                  "Retail"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "3",
+                  "Shipping- BL2",
+                  "Shipping"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "4",
+                  "Shipping - BL2",
+                  "Shipping"
+                ],
+                "line": 15
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "these deals have already been assigned to a sector/subSector",
+            "match": {
+              "location": "RefDataRestServiceStepDef.these_deals_have_already_been_assigned_to_a_sector_subSector(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "dlCode",
+                  "dlSourceApplication",
+                  "sector",
+                  "subSector"
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "DL12345",
+                  "SRC",
+                  "Shipping",
+                  "Shipping - BL1"
+                ],
+                "line": 18
+              },
+              {
+                "cells": [
+                  "DL4567",
+                  "SRC",
+                  "Retail",
+                  "Retail- BL1"
+                ],
+                "line": 19
+              },
+              {
+                "cells": [
+                  "DL4567",
+                  "SSAC",
+                  "Retail",
+                  "Retail- BL1"
+                ],
+                "line": 20
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 82,
+        "name": "some blabla",
+        "id": "as-user,-i-want-to-manage-a-deal-sector/subsector-from-anywhere;when-assigning-sector/subsector-to-a-deal,-sector-is-deduced-from-subsector.-this-allows-us-to-process-the-request",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 86,
+            "name": "I need to assign a sector/subSector to deal",
+            "match": {
+              "arguments": [
+                {
+                  "val": "",
+                  "offset": 45
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_need_to_assign_a_sector_subSector_to_deal(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 87,
+            "name": "I provide the source application as \"SRC\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "SRC",
+                  "offset": 37
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_provide_the_source_application_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 88,
+            "name": "I assign it to subSector \"Shipping - BL1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Shipping - BL1",
+                  "offset": 26
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_assign_it_to_subSector(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 89,
+            "name": "I get a status code saying everything went well",
+            "match": {
+              "location": "RefDataRestServiceStepDef.i_get_a_status_code_saying_everything_went_well()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 90,
+            "name": "following assignation gets recorded",
+            "match": {
+              "location": "RefDataRestServiceStepDef.following_assignation_gets_recorded(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "dlCode",
+                  "dlSourceApplication",
+                  "sector",
+                  "subSector"
+                ],
+                "line": 91
+              },
+              {
+                "cells": [
+                  "DL74185",
+                  "SRC",
+                  "Shipping",
+                  "Shipping - BL1"
+                ],
+                "line": 92
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 93,
+            "name": "I assign it to sector \"Retail\" and subSector \"Shipping - BL1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Retail",
+                  "offset": 23
+                },
+                {
+                  "val": "Shipping - BL1",
+                  "offset": 46
+                }
+              ],
+              "location": "RefDataRestServiceStepDef.i_assign_it_to_sector_and_subSector(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 94,
+            "name": "I get a status code saying everything went well",
+            "match": {
+              "location": "RefDataRestServiceStepDef.i_get_a_status_code_saying_everything_went_well()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 95,
+            "name": "following assignation gets recorded",
+            "match": {
+              "location": "RefDataRestServiceStepDef.following_assignation_gets_recorded(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "dlCode",
+                  "dlSourceApplication",
+                  "sector",
+                  "subSector"
+                ],
+                "line": 96
+              },
+              {
+                "cells": [
+                  "DL74185",
+                  "SRC",
+                  "Shipping",
+                  "Shipping - BL1"
+                ],
+                "line": 97
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "As a user, I want to manage a deal sector/subsector from anywhere",
+    "id": "as-a-user,-i-want-to-manage-a-deal-sector/subsector-from-anywhere",
+    "keyword": "Feature",
+    "uri": "features/referentialdata-ws-scenario.feature"
+  }
+]
