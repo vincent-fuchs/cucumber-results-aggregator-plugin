@@ -121,7 +121,7 @@
 									<goal>sign</goal>
 								</goals>
 							</execution>
-						</executions>			
+						</executions>
 					</plugin>
 				</plugins>
 			</build>
@@ -180,6 +180,7 @@
 				<artifactId>maven-release-plugin</artifactId>
 				<version>2.5.1</version>
 				<configuration>
+					<stagingRepository>https://oss.sonatype.org/service/local/staging/deploy/maven2</stagingRepository>
 					<tagNameFormat>cucumber_results_aggregator_plugin_@{project.version}</tagNameFormat>
 				</configuration>
 			</plugin>
