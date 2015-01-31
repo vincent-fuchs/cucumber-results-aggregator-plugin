@@ -20,7 +20,7 @@ If you have Cucumber results in 2 modules (module1 and module3), you can configu
 <plugin>
   <groupId>com.github.vincent-fuchs</groupId>
   <artifactId>cucumber-results-aggregator-plugin</artifactId>
-  <version>1.0</version>
+  <version>1.0.1</version>
   <executions>
     <execution>
       <id>execution</id>
