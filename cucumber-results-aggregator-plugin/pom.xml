@@ -1,12 +1,11 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 
 	<groupId>com.github.vincent-fuchs</groupId>
 	<artifactId>cucumber-results-aggregator-plugin</artifactId>
 	<name>cucumber-results-aggregator-plugin</name>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
 	<url>https://github.com/vincent-fuchs/cucumber-results-aggregator-plugin</url>
@@ -19,7 +18,8 @@
 		<url>https://github.com/vincent-fuchs/cucumber-results-aggregator-plugin</url>
 		<connection>scm:git:git@github.com:vincent-fuchs/cucumber-results-aggregator-plugin.git</connection>
 		<developerConnection>scm:git:git@github.com:vincent-fuchs/cucumber-results-aggregator-plugin.git</developerConnection>
-	</scm>
+	  <tag>cucumber_results_aggregator_plugin_1.0.0</tag>
+  </scm>
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
