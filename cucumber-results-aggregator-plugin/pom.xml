@@ -5,6 +5,7 @@
 	<groupId>com.github.vincent-fuchs</groupId>
 	<artifactId>cucumber-results-aggregator-plugin</artifactId>
 	<name>cucumber-results-aggregator-plugin</name>
+	<description>A maven plugin to aggregate Cucumber results from a multi module project</description>
 	<version>1.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
