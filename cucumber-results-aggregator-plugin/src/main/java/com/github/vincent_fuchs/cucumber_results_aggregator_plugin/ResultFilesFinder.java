@@ -36,11 +36,21 @@ public class ResultFilesFinder {
 
 		log.info("root directory : "+rootDirectory);
 		
+		if(modules.isEmpty()){
+			log.warn("no modules configured, so not doing anything");
+		}
+		
 		for (String module : modules) {
 			
 			File childModule = new File(rootDirectory + File.separator + module);
 
 			log.info("looking for Cucumber results in :" + childModule);
+			
+			if(!childModule.exists()){
+				log.warn("\tskipping, as directory doesn't exist");
+				break;
+			}
+			
 			
 			DirectoryScanner scanner= new DirectoryScanner();
 			scanner.setIncludes(new String[]{pattern});
