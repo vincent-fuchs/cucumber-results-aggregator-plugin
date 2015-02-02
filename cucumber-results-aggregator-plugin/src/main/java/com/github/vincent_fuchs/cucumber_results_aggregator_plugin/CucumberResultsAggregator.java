@@ -14,7 +14,7 @@ import org.apache.maven.plugin.MojoExecutionException;
  * 
  * @goal aggregate
  * 
- * @phase pre-site
+ * @phase post-integration-test
  */
 public class CucumberResultsAggregator extends AbstractMojo {
 
