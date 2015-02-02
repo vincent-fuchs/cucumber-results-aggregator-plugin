@@ -14,7 +14,7 @@ import org.apache.maven.plugin.MojoExecutionException;
  * 
  * @goal aggregate
  * 
- * @phase test
+ * @phase pre-site
  */
 public class CucumberResultsAggregator extends AbstractMojo {
 
@@ -82,13 +82,20 @@ public class CucumberResultsAggregator extends AbstractMojo {
 		PrintWriter out = null;
 		try {
 			
+			if(targetDirectory!=null){
 			out = new PrintWriter(targetDirectory + File.separator	+ outputFileName);
 			out.write(jsonConcatenator.getResultAsString());
+			}
+			else{
+				getLog().warn("couldn't write output file, as target directory doesn't exist");
+			}
 			
 		} catch (IOException e) {
 			getLog().error("can't write ouput file",e);
 		} finally {
-			out.close();
+			if(out!=null){
+				out.close();
+			}
 		}
 	}
 
