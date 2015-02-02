@@ -8,10 +8,10 @@ The goal of this Maven plugin is to aggregate Cucumber results from a configured
 
 Assuming you have a structure like this :
 
-myProject
-   |-->module1
-   |-->module2
-   |-->module3
+myProject <br/>
+   |-->module1 <br/>
+   |-->module2 <br/>
+   |-->module3 <br/>
    -pom.xml
 
 If you have Cucumber results in 2 modules (module1 and module3), you can configure the plugin like this :
