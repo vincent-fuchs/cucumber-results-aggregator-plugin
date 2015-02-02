@@ -43,9 +43,15 @@ public class CucumberResultsAggregator extends AbstractMojo {
 	private String outputFileName;
 
 	public void execute() throws MojoExecutionException {
-
-		getLog().info("targetDirectory:" + targetDirectory);
-
+		
+		if(getLog().isInfoEnabled()){
+			getLog().info("targetDirectory:" + targetDirectory);
+			getLog().info("configured modules:");
+			for(String module : modules){
+				getLog().info("\t- "+module);
+			}
+		}
+		
 		rootModuleDirectory = targetDirectory.getParentFile();
 			
 		List<File> cucumberResultFilesToAggregate = null;
