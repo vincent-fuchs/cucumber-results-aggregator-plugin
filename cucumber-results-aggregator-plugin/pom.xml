@@ -33,6 +33,7 @@
 		<url>https://github.com/vincent-fuchs/cucumber-results-aggregator-plugin/issues</url>
 		<system>GitHub</system>
 	</issueManagement>
+	
 	<distributionManagement>
 		<snapshotRepository>
 			<id>ossrh</id>
@@ -40,7 +41,7 @@
 		</snapshotRepository>
 		<repository>
 			<id>ossrh</id>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+			<url>https://oss.sonatype.org/content/repositories/releases</url>
 		</repository>
 	</distributionManagement>
 
